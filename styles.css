@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Poppins";
+  background: #f7f7f7;
+}
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin-bottom: 15px;
+}
+a {
+  color: #333;
+  text-decoration: 0;
+}
+header {
+  background-color: #fff;
+  padding: 30px 0;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+nav ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+  align-items: center;
+}
+nav {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.logo a {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  line-height: 0.5;
+}
+.logo a span {
+  font-weight: 800;
+  display: block;
+  letter-spacing: 1.5px;
+}
+.grid-container {
+  margin: 30px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  grid-auto-rows: 250px;
+}
+.grid-container div {
+  background-color: #fff;
+  border-radius: 6px;
+  border: 20px solid #fff;
+  overflow: hidden;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
+}
+.grid-container div img {
+  min-width: 100%;
+  height: 100%;
+}
+main .short {
+  grid-row: span 1;
+}
+main .tall {
+  grid-row: span 2;
+}
+@media screen and (max-width: 960px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  nav ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  li.logo {
+    grid-column: 1 / span 4;
+    grid-row: 1;
+  }
+
+  li {
+    margin: 10px 0;
+  }
+
+  li.logo a {
+    line-height: 1.3;
+  }
+}
